@@ -1,0 +1,126 @@
+/* STANDAARD INSTELLINGEN */
+html,
+body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0px;
+}
+
+/* main{
+    overflow: auto;
+} */
+
+header,
+footer {
+    text-align: center;
+}
+
+header {
+    background-color: rgba(78, 126, 177, 0.5);
+}
+
+footer {
+    background-color: rgba(78, 126, 177, 0.8);
+}
+
+header, nav, main, footer{
+    padding: 10px;
+}
+
+/* instellingen indivudiueel */
+
+/* instellingen titel */
+.titel h1, .titel h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Artikel */
+article{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 2px rgba(78, 126, 177, 0.5);
+    border-radius: 15px;
+    width: 95%;
+    /* height: 10em; */
+}
+
+
+/*KLEINER DAN 40em*/
+@media(max-width: 40em) {
+    body{
+        grid-template-rows: auto auto 1fr auto;
+    }
+
+    header{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    header img {
+        width: 160px;
+        height: auto;
+    }
+
+    .beginpagina img{
+        margin: 10px;
+        width: 125px;
+        height: auto;
+    }
+}
+
+
+/*GROTER DAN 40em*/
+@media(min-width: 40em) {
+    body{
+        grid-template-columns: 13em 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 20em 1fr 20em;
+    }
+
+    header img {
+        width: 240px;
+        height: auto;
+    }
+
+    .titel h1{
+        font-size: 2.5em;
+        margin-bottom: 0px;
+    }
+    
+    .titel h2{
+        font-size: 1.875em;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    nav{
+        border-right: solid 2px rgba(78, 126, 177, 0.5);
+    }
+
+    footer {
+        grid-row: 3;
+        grid-column: 1 /-1;
+        display: grid;
+        grid-template-columns: 15em 1fr 15em;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .beginpagina{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .beginpagina img{
+        margin: 10px;
+        width: 250px;
+        height: auto;
+    }
+}

@@ -1,0 +1,96 @@
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: rgba(78, 126, 177, 0.5);
+}
+
+/*GROOTTER DAN 40em*/
+@media(min-width: 40em){
+    nav a {
+        background-color: lightgray;
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: solid 2px rgba(78, 126, 177, 0.5);
+        width: 100%;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+
+    .nav-list{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+    }
+}
+
+/*KLEINER DAN 40em*/
+@media(max-width: 40em){
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(78, 126, 177, 0.5);
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0 15px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger-menu {
+        background-color: white;
+        height: 3px;
+        width: 25px;
+        margin: 3px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(166, 190, 216, 1);
+        position: absolute;
+        top: 47px;
+        left: 0;
+        width: 200px;
+    }
+
+    .menu-toggle:checked+.menu-icon+.nav-list {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 10px;
+    }
+}
